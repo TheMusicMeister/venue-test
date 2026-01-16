@@ -1,3 +1,13 @@
+// Preloader - hide after animation
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
+            preloader.style.display = 'none';
+        }
+    }, 3800); // Match animation duration (3s animation + 0.8s fade)
+});
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
