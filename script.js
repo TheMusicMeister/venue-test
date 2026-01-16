@@ -2,6 +2,17 @@
 const sections = document.querySelectorAll('.hero, .section');
 const navLinks = document.querySelectorAll('.nav-link');
 const loadingOverlay = document.getElementById('loading-overlay');
+const preloader = document.getElementById('preloader');
+
+// Hide preloader after initial animation
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        if (preloader) {
+            preloader.style.display = 'none';
+        }
+        initializePage();
+    }, 4300); // 3.5s animation + 0.8s fade
+});
 
 // Hide all sections except home on load
 function initializePage() {
