@@ -1,0 +1,26 @@
+{
+  "name": "venue-test",
+  "version": "1.0.0",
+  "description": "Mystique - FFXIV Roleplay Venue Website",
+  "scripts": {
+    "dev": "browser-sync start --server --files \"*.html, assets/**/*\" --browser firefox --no-notify",
+    "start": "npm run dev",
+    "clean": "rimraf dist",
+    "copy:html": "copyfiles -f *.html *.xml *.txt dist",
+    "copy:images": "copyfiles -u 1 assets/images/**/* dist",
+    "build:css": "cleancss -o dist/assets/css/styles.min.css assets/css/styles.css",
+    "build:js": "terser assets/js/script.js -o dist/assets/js/script.min.js -c -m",
+    "prebuild": "npm run clean",
+    "build": "npm-run-all --parallel copy:html copy:images build:css build:js && node update-paths.js",
+    "generate:favicons": "node generate-favicons.js"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.3",
+    "clean-css-cli": "^5.6.3",
+    "copyfiles": "^2.4.1",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^5.0.5",
+    "terser": "^5.27.0",
+    "sharp": "^0.33.2"
+  }
+}

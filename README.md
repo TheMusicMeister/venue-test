@@ -1,5 +1,7 @@
 # Mystique - FFXIV Venue Website
 
+![Build Status](https://github.com/TheMusicMeister/venue-test/actions/workflows/deploy.yml/badge.svg)
+
 A sleek, professional website template for Mystique, a high-class brothel and nightclub roleplay venue in Final Fantasy XIV.
 
 ## Features
@@ -9,32 +11,110 @@ A sleek, professional website template for Mystique, a high-class brothel and ni
 - **Staff Modal System** - Click staff cards to view detailed bios in elegant modals
 - **Smooth Scrolling** - Professional navigation with scroll animations
 - **Discord Integration** - Easy-to-update Discord widget placeholder
-- **SEO Friendly** - Proper HTML5 semantic structure
+- **SEO Optimized** - Meta tags, Open Graph, favicons, robots.txt, and sitemap
+- **Automated Build Pipeline** - GitHub Actions auto-deploys minified assets
+- **Performance Optimized** - Minified CSS/JS for faster load times
+
+## Project Structure
+
+```
+venue-test/
+├── index.html              # Main HTML file
+├── 404.html               # Custom 404 error page
+├── robots.txt             # SEO crawler configuration
+├── sitemap.xml            # Sitemap for search engines
+├── assets/
+│   ├── css/
+│   │   └── styles.css     # Main stylesheet
+│   ├── js/
+│   │   └── script.js      # JavaScript for navigation and modals
+│   └── images/
+│       ├── lipstick_kiss.png
+│       ├── favicon-192.png
+│       ├── favicon-512.png
+│       └── apple-touch-icon.png
+├── .github/
+│   └── workflows/
+│       └── deploy.yml     # GitHub Actions deployment workflow
+├── package.json           # NPM dependencies and scripts
+├── update-paths.js        # Build script to update asset paths
+└── generate-favicons.js   # Script to generate favicons
+
+```
 
 ## Setup Instructions
 
-### GitHub Pages Deployment
+### Prerequisites
+- Node.js 18+ installed
+- npm or yarn package manager
 
-1. **Create a GitHub Repository**
-   - Go to [GitHub](https://github.com) and create a new repository
-   - Name it something like `mystique-venue` or `ffxiv-mystique`
-   - Make it **Public**
-   - Don't initialize with README (you'll upload these files)
+### Local Development
 
-2. **Upload Files**
-   - Click "uploading an existing file"
-   - Upload all three files: `index.html`, `styles.css`, `script.js`
-   - Commit the files
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/TheMusicMeister/venue-test.git
+   cd venue-test
+   ```
 
-3. **Enable GitHub Pages**
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Generate favicons** (one-time setup)
+   ```bash
+   npm run generate:favicons
+   ```
+
+4. **Start development server**
+   ```bash
+   npm run dev
+   ```
+   This will open Firefox automatically with live reload enabled. Edit any file and the browser will refresh automatically.
+
+### GitHub Pages Deployment (Automated)
+
+The site automatically deploys to GitHub Pages via GitHub Actions whenever you push to the `main` branch.
+
+**Initial Setup:**
+
+1. **Enable GitHub Pages**
    - Go to repository Settings → Pages
-   - Under "Source", select "Deploy from a branch"
-   - Select branch: `main`, folder: `/ (root)`
-   - Click Save
+   - Under "Source", select "GitHub Actions"
+   - Save the settings
 
-4. **Your Site is Live!**
-   - Your site will be available at: `https://yourusername.github.io/repo-name/`
-   - It may take a few minutes to deploy
+2. **Push to main branch**
+   ```bash
+   git add .
+   git commit -m "Your commit message"
+   git push origin main
+   ```
+
+3. **Wait for deployment**
+   - Check the "Actions" tab to see build progress
+   - Your site will be live at: `https://themusicmeister.github.io/venue-test/`
+   - First deployment takes 5-10 minutes
+
+The GitHub Actions workflow will:
+- Install dependencies
+- Generate favicons
+- Minify CSS and JavaScript
+- Optimize images
+- Deploy to GitHub Pages automatically
+
+### Manual Build (Optional)
+
+If you want to build locally without deploying:
+
+```bash
+npm run build
+```
+
+This creates a `dist/` folder with:
+- Minified CSS (~50-70% smaller)
+- Minified JavaScript (~30-40% smaller)
+- Optimized images
+- All HTML files with updated paths
 
 ### Optional: Custom Domain
 
@@ -43,11 +123,19 @@ If you want a custom domain like `mystique-venue.com`:
 2. In your repo Settings → Pages, add your custom domain
 3. Follow GitHub's DNS configuration instructions
 
+## NPM Scripts
+
+- `npm run dev` - Start development server with live reload (Firefox)
+- `npm start` - Alias for `npm run dev`
+- `npm run build` - Build production-ready files to `dist/`
+- `npm run generate:favicons` - Generate favicons from lipstick_kiss.png
+- `npm run clean` - Remove dist/ directory
+
 ## Customization Guide
 
 ### Changing Colors
 
-In `styles.css`, modify the color variables at the top:
+In [`assets/css/styles.css`](assets/css/styles.css), modify the color variables at the top:
 
 ```css
 :root {
@@ -60,34 +148,24 @@ In `styles.css`, modify the color variables at the top:
 
 ### Adding Your Images
 
-Replace the placeholder images in `index.html`:
-
-**Hero Background:**
-```html
-<!-- Line 26 in index.html -->
-background: url('YOUR_IMAGE_URL_HERE') center/cover;
-```
+Replace the placeholder images in [`index.html`](index.html):
 
 **Staff Photos:**
-```html
-<!-- Lines 167, 177, 187, 197 in index.html -->
-<img src="YOUR_STAFF_IMAGE_URL" alt="Staff Name">
-```
+- Add your images to `assets/images/`
+- Update image paths in the HTML (around lines 141, 150, 159, 168 for cards)
+- Update modal images (around lines 294, 310, 326, 342)
 
 **Tips for Images:**
-- Upload images to your GitHub repo and reference them as `./images/filename.jpg`
-- Or use a free image host like Imgur
+- Keep images in `assets/images/` folder
 - Recommended sizes:
-  - Hero background: 1920x1080px
-  - Staff portraits: 400x600px minimum
+  - Staff card portraits: 300x400px
+  - Modal portraits: 400x500px
+  - Try to keep file sizes under 500KB for performance
 
 ### Updating Content
 
-**Venue Information** (Lines 33-37):
-```html
-<p>Crystal Datacenter • Balmung</p>
-<p>Open Fridays & Saturdays • 8pm - 12am EST</p>
-```
+**Venue Information:**
+Update the hero section in [`index.html`](index.html) (around lines 68-71)
 
 **Staff Members:**
 Each staff member has two sections:
