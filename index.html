@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystique - Eorzea's Premier House of Indulgence</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">MYSTIQUE</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#staff">Staff</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#rules">Rules</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">MYSTIQUE</h1>
+            <p class="hero-tagline">Where Pleasure Meets Prestige</p>
+            <div class="hero-info">
+                <p>Crystal Datacenter • Balmung</p>
+                <p>Open Fridays & Saturdays • 8pm - 12am EST</p>
+            </div>
+        </div>
+        <div class="scroll-indicator">↓</div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Mystique</h2>
+            <div class="about-content">
+                <p>In the heart of Ul'dah's entertainment district lies Mystique—an exclusive sanctuary where Eorzea's elite gather for refined pleasures and discreet indulgence. Behind velvet curtains and crystal chandeliers, our establishment offers an escape from the mundane into a world of sophistication and sensuality.</p>
+                <p>Founded by a former courtesan of the Songbird's court, Mystique has earned its reputation through impeccable service, absolute discretion, and an atmosphere of decadent luxury. Whether you seek stimulating conversation, exquisite performances, or more intimate companionship, our carefully curated staff awaits to fulfill your desires.</p>
+                <div class="about-features">
+                    <div class="feature">
+                        <h3>Exclusive Atmosphere</h3>
+                        <p>Lavishly appointed spaces designed for comfort and privacy</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Elite Companions</h3>
+                        <p>Handpicked staff trained in the arts of entertainment and conversation</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Absolute Discretion</h3>
+                        <p>Your privacy is our paramount concern</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>The Lounge</h3>
+                    <p class="service-price">Complimentary</p>
+                    <p>Enjoy our main floor with live performances, fine drinks, and social mingling. No reservations required.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Private Consultation</h3>
+                    <p class="service-price">50,000 gil</p>
+                    <p>One hour of undivided attention from a companion of your choice in our intimate parlor rooms.</p>
+                </div>
+                <div class="service-card">
+                    <h3>VIP Suite Experience</h3>
+                    <p class="service-price">100,000 gil</p>
+                    <p>Two hours in our luxurious suites with premium refreshments and personalized service.</p>
+                </div>
+                <div class="service-card">
+                    <h3>The Midnight Package</h3>
+                    <p class="service-price">200,000 gil</p>
+                    <p>An unforgettable evening: dinner, entertainment, and exclusive companionship until dawn.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Staff Section -->
+    <section id="staff" class="section">
+        <div class="container">
+            <h2 class="section-title">Our Companions</h2>
+            <div class="staff-grid">
+                <div class="staff-card" onclick="openModal('staff1')">
+                    <div class="staff-image">
+                        <img src="https://via.placeholder.com/300x400/1a1a1a/8b0000?text=Portrait" alt="Staff Member">
+                    </div>
+                    <div class="staff-info">
+                        <h3>Scarlet Rose</h3>
+                        <p class="staff-role">Lead Courtesan</p>
+                    </div>
+                </div>
+                <div class="staff-card" onclick="openModal('staff2')">
+                    <div class="staff-image">
+                        <img src="https://via.placeholder.com/300x400/1a1a1a/8b0000?text=Portrait" alt="Staff Member">
+                    </div>
+                    <div class="staff-info">
+                        <h3>Midnight Veil</h3>
+                        <p class="staff-role">Entertainer</p>
+                    </div>
+                </div>
+                <div class="staff-card" onclick="openModal('staff3')">
+                    <div class="staff-image">
+                        <img src="https://via.placeholder.com/300x400/1a1a1a/8b0000?text=Portrait" alt="Staff Member">
+                    </div>
+                    <div class="staff-info">
+                        <h3>Silver Whisper</h3>
+                        <p class="staff-role">Companion</p>
+                    </div>
+                </div>
+                <div class="staff-card" onclick="openModal('staff4')">
+                    <div class="staff-image">
+                        <img src="https://via.placeholder.com/300x400/1a1a1a/8b0000?text=Portrait" alt="Staff Member">
+                    </div>
+                    <div class="staff-info">
+                        <h3>Crimson Dream</h3>
+                        <p class="staff-role">Host</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Upcoming Events</h2>
+            <div class="events-list">
+                <div class="event-item">
+                    <div class="event-date">
+                        <span class="event-day">FRI</span>
+                        <span class="event-num">24</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Masquerade Night</h3>
+                        <p>Don your finest mask and join us for an evening of mystery and allure. Special performances throughout the night.</p>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <div class="event-date">
+                        <span class="event-day">SAT</span>
+                        <span class="event-num">25</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Velvet Lounge Jazz</h3>
+                        <p>Live performances from Eorzea's finest musicians. Intimate atmosphere, premium spirits.</p>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <div class="event-date">
+                        <span class="event-day">FRI</span>
+                        <span class="event-num">31</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>New Year's Gala</h3>
+                        <p>Ring in the new year with champagne, dancing, and exclusive entertainment. Formal attire required.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules Section -->
+    <section id="rules" class="section">
+        <div class="container">
+            <h2 class="section-title">House Rules & Etiquette</h2>
+            <div class="rules-content">
+                <div class="rules-column">
+                    <h3>In-Character Guidelines</h3>
+                    <ul>
+                        <li>Respect all staff and patrons at all times</li>
+                        <li>Consent is mandatory for all interactions</li>
+                        <li>No violence or disruption on premises</li>
+                        <li>Formal or semi-formal attire preferred</li>
+                        <li>Private services require advance booking</li>
+                    </ul>
+                </div>
+                <div class="rules-column">
+                    <h3>Out-of-Character Policies</h3>
+                    <ul>
+                        <li>All participants must be 18+ (player and character)</li>
+                        <li>Fade-to-black is always an option</li>
+                        <li>No ERP in public spaces</li>
+                        <li>Respect boundaries and use proper RP etiquette</li>
+                        <li>Zero tolerance for harassment or OOC drama</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rules-notice">
+                <p><strong>Important:</strong> Mystique is a mature RP venue for adults only. By entering, you acknowledge that you are 18 years or older and consent to adult themes and content. Always communicate boundaries clearly with RP partners.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Visit Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Location</h3>
+                    <p>Crystal Datacenter - Balmung</p>
+                    <p>Goblet, Ward 12, Plot 30</p>
+                    
+                    <h3>Operating Hours</h3>
+                    <p>Friday & Saturday</p>
+                    <p>8:00 PM - 12:00 AM EST</p>
+                    
+                    <h3>Reservations</h3>
+                    <p>Contact our management via Discord for private bookings and VIP services.</p>
+                </div>
+                <div class="discord-widget">
+                    <h3>Join Our Community</h3>
+                    <a href="#" class="discord-button" target="_blank">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"/>
+                        </svg>
+                        Join Discord
+                    </a>
+                    <p class="discord-note">Connect with us for bookings, updates, and community events</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mystique. A Final Fantasy XIV Roleplay Venue.</p>
+            <p class="footer-note">This is a fan-made roleplay venue and is not affiliated with Square Enix.</p>
+        </div>
+    </footer>
+
+    <!-- Staff Modals -->
+    <div id="staff1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('staff1')">&times;</span>
+            <div class="modal-body">
+                <img src="https://via.placeholder.com/400x500/1a1a1a/8b0000?text=Portrait" alt="Scarlet Rose">
+                <div class="modal-info">
+                    <h2>Scarlet Rose</h2>
+                    <p class="modal-role">Lead Courtesan</p>
+                    <p class="modal-bio">A former dancer from the Pearl Lane theatres, Scarlet Rose brings elegance and wit to every encounter. With crimson locks and an infectious laugh, she has captivated nobles and adventurers alike. Her specialty lies in making every guest feel like the most important person in Eorzea.</p>
+                    <p><strong>Specialties:</strong> Conversation, Dancing, Wine Tasting</p>
+                    <p><strong>Availability:</strong> By appointment only</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="staff2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('staff2')">&times;</span>
+            <div class="modal-body">
+                <img src="https://via.placeholder.com/400x500/1a1a1a/8b0000?text=Portrait" alt="Midnight Veil">
+                <div class="modal-info">
+                    <h2>Midnight Veil</h2>
+                    <p class="modal-role">Entertainer</p>
+                    <p class="modal-bio">Mysterious and alluring, Midnight Veil is known for enchanting performances that blur the line between reality and fantasy. A master of atmospheric storytelling and ambient magic, they create unforgettable experiences for discerning patrons.</p>
+                    <p><strong>Specialties:</strong> Performance Art, Magical Displays, Storytelling</p>
+                    <p><strong>Availability:</strong> Friday & Saturday evenings</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="staff3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('staff3')">&times;</span>
+            <div class="modal-body">
+                <img src="https://via.placeholder.com/400x500/1a1a1a/8b0000?text=Portrait" alt="Silver Whisper">
+                <div class="modal-info">
+                    <h2>Silver Whisper</h2>
+                    <p class="modal-role">Companion</p>
+                    <p class="modal-bio">Soft-spoken yet captivating, Silver Whisper specializes in creating intimate, comfortable atmospheres. With a background in healing arts and meditation, they offer a unique blend of physical relaxation and mental rejuvenation.</p>
+                    <p><strong>Specialties:</strong> Relaxation, Meditation, Quiet Companionship</p>
+                    <p><strong>Availability:</strong> Most evenings, reservations recommended</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="staff4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('staff4')">&times;</span>
+            <div class="modal-body">
+                <img src="https://via.placeholder.com/400x500/1a1a1a/8b0000?text=Portrait" alt="Crimson Dream">
+                <div class="modal-info">
+                    <h2>Crimson Dream</h2>
+                    <p class="modal-role">Host</p>
+                    <p class="modal-bio">Charming and sophisticated, Crimson Dream ensures every guest receives a warm welcome and attentive service. A former merchant with connections throughout Eorzea, they excel at matchmaking guests with the perfect companion for their desires.</p>
+                    <p><strong>Specialties:</strong> Guest Services, Event Coordination, Networking</p>
+                    <p><strong>Availability:</strong> All operating hours</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
