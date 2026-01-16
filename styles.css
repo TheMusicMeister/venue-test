@@ -32,10 +32,10 @@
 }
 
 .lipstick-kiss {
-    width: 150px;
-    height: 150px;
-    filter: drop-shadow(0 0 30px rgba(139, 0, 0, 0.8));
-    animation: kissFloat 2s ease-in-out infinite, kissPulse 1.5s ease-in-out infinite;
+    width: 200px;
+    height: auto;
+    filter: drop-shadow(0 0 30px rgba(220, 20, 60, 0.8));
+    animation: kissFloat 3s ease-in-out infinite, kissPulse 2s ease-in-out infinite, kissRotate 4s ease-in-out infinite;
 }
 
 .loading-text {
@@ -61,19 +61,30 @@
 
 @keyframes kissFloat {
     0%, 100% {
-        transform: translateY(0) rotate(-5deg);
+        transform: translateY(0);
     }
     50% {
-        transform: translateY(-10px) rotate(5deg);
+        transform: translateY(-15px);
     }
 }
 
 @keyframes kissPulse {
     0%, 100% {
-        filter: drop-shadow(0 0 30px rgba(139, 0, 0, 0.8));
+        filter: drop-shadow(0 0 30px rgba(220, 20, 60, 0.8));
+        transform: scale(1);
     }
     50% {
-        filter: drop-shadow(0 0 40px rgba(139, 0, 0, 1));
+        filter: drop-shadow(0 0 50px rgba(220, 20, 60, 1)) drop-shadow(0 0 80px rgba(220, 20, 60, 0.6));
+        transform: scale(1.05);
+    }
+}
+
+@keyframes kissRotate {
+    0%, 100% {
+        transform: rotate(-3deg);
+    }
+    50% {
+        transform: rotate(3deg);
     }
 }
 
