@@ -17,7 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: fadeOutPreloader 0.8s ease 3.5s forwards;
+    animation: fadeOutPreloader 0.8s ease 4.5s forwards;
 }
 
 .kiss-container-preload {
@@ -26,10 +26,11 @@
 }
 
 .lipstick-kiss-preload {
-    width: 50px;
+    width: 800px;
+    max-width: 90vw;
     height: auto;
-    filter: drop-shadow(0 0 20px rgba(220, 20, 60, 0.6)) blur(3px);
-    animation: kissZoomIn 3s ease-out forwards;
+    filter: drop-shadow(0 0 20px rgba(220, 20, 60, 0.6)) blur(8px);
+    animation: kissZoomIn 4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 .loading-text-preload {
@@ -39,7 +40,7 @@
     color: #8b0000;
     margin-top: 2rem;
     opacity: 0;
-    animation: textFadeIn 1s ease-in 2.5s forwards;
+    animation: textFadeIn 1s ease-in 3s forwards;
 }
 
 /* Preloader Animations */
@@ -52,22 +53,33 @@
 
 @keyframes kissZoomIn {
     0% {
-        transform: scale(0.2) translateZ(-500px);
-        filter: drop-shadow(0 0 20px rgba(220, 20, 60, 0.6)) blur(8px);
-        opacity: 0.3;
+        transform: scale(0.1) translateZ(-1000px) rotateX(20deg);
+        filter: drop-shadow(0 0 40px rgba(220, 20, 60, 0.4)) blur(15px);
+        opacity: 0;
     }
-    60% {
-        transform: scale(1.1) translateZ(0);
-        filter: drop-shadow(0 0 40px rgba(220, 20, 60, 1)) blur(0px);
+    40% {
+        transform: scale(3.5) translateZ(100px) rotateX(0deg);
+        filter: drop-shadow(0 0 100px rgba(220, 20, 60, 1)) drop-shadow(0 0 200px rgba(220, 20, 60, 0.8)) blur(0px);
         opacity: 1;
     }
-    80% {
-        transform: scale(0.95) translateZ(0);
-        filter: drop-shadow(0 0 50px rgba(220, 20, 60, 1)) blur(0px);
+    55% {
+        transform: scale(3.8) translateZ(120px) rotateX(0deg);
+        filter: drop-shadow(0 0 120px rgba(220, 20, 60, 1)) drop-shadow(0 0 250px rgba(220, 20, 60, 0.9)) blur(0px);
+        opacity: 1;
+    }
+    75% {
+        transform: scale(0.8) translateZ(0) rotateX(0deg);
+        filter: drop-shadow(0 0 60px rgba(220, 20, 60, 0.9)) blur(0px);
+        opacity: 1;
+    }
+    85% {
+        transform: scale(1.1) translateZ(0) rotateX(0deg);
+        filter: drop-shadow(0 0 50px rgba(220, 20, 60, 0.9)) blur(0px);
+        opacity: 1;
     }
     100% {
-        transform: scale(1) translateZ(0);
-        filter: drop-shadow(0 0 40px rgba(220, 20, 60, 0.9)) blur(0px);
+        transform: scale(1) translateZ(0) rotateX(0deg);
+        filter: drop-shadow(0 0 40px rgba(220, 20, 60, 0.8)) blur(0px);
         opacity: 1;
     }
 }

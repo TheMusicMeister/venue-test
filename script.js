@@ -11,7 +11,7 @@ window.addEventListener('load', () => {
             preloader.style.display = 'none';
         }
         initializePage();
-    }, 4300); // 3.5s animation + 0.8s fade
+    }, 5300); // 4s animation + 0.8s fade + extra buffer
 });
 
 // Hide all sections except home on load
